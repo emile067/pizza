@@ -13,3 +13,13 @@ body{
   background-size: cover;
   position: relative;
 }
+.bg-form{
+  color: black;
+  background: white;
+}
+.box{
+  border: 15px solid;
+  border-radius: 25px;
+  padding: 50px;
+  margin: 20px;
+}
