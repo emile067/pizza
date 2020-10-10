@@ -13,24 +13,24 @@
 <body>
   <div class="container-fluid bg2 text-center">
     <p><img src="images/pizza-icon.png" alt="pizza-icon">PIZZA HOUSE</p>
-    <button type="button" class="btn btn-light">Order now</button>
+    <a class="btn btn-light" href="#order-area" role="button">Order now</a>
   </div>
   <div class="container-fluid bg1 padding text-center">
     <div style="position: absolute; top: 50%; left: 20%;">
       <h1>People disappoint, but pizza never does.</h1>
     </div>
   </div>
-  <div class="container-fluid bg2 padding">
+  <div id="order-area" class="container-fluid bg2 padding">
     <div class="container bg-form box">
       <form>
         <div class="form-group row">
-          <label for="example-number-input" class="col-2 col-form-label">how many pizzas:</label>
+          <label for="pizza-number" class="col-2 col-form-label">how many pizzas:</label>
           <div class="col-10">
-            <input class="form-control" type="number" value="42" id="example-number-input">
+            <input class="form-control" type="number" value="" id="pizza-number">
           </div>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Choose pizza size:</label>
+          <label for="pizza-size">Choose pizza size:</label>
           <select class="form-control" id="pizza-size">
             <option>Small</option>
             <option>Medium</option>
