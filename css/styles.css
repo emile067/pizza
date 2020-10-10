@@ -23,3 +23,11 @@ body{
   padding: 50px;
   margin: 20px;
 }
+.bg3{
+  background-image: url('../images/footback.jpeg');
+  height:auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
