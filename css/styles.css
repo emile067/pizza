@@ -2,3 +2,6 @@ body{
   color: azure;
   background-image: url('../images/wood-back2.jpeg');
 }
+.padding{
+  padding: 50px;
+}
