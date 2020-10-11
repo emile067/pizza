@@ -5,7 +5,13 @@ var toppingsNbr;
 var pizzaSize;
 var pizzaCrust;
 var pizzaNbr;
-
+function Order(number,size,crust,toppings,price){
+  this.number = number;
+  this.size=size;
+  this.crust=crust;
+  this.toppings=toppings;
+  this.price=price;
+}
 $(document).ready(function(){
   $('#order-form').submit(function(event){
     event.preventDefault();
