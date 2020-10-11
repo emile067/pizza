@@ -46,6 +46,14 @@ $(document).ready(function(){
     $("#total").text("total:" + sumTotal)
     $("#deli-hide").hide();
   });
+  $('textarea#message').keypress(function (e) {
+    if (e.which == 13) {
+      $('form#feedback').submit();
+      var feedname= $('#name').val();
+      alert(feedname + ". Thanks for your feedback. It's highly appreciated.");
+      return false;    //<---- Add this line
+    }
+  });
 });
 function priceCalc(){
   var crustPrice,toppingsPrice;

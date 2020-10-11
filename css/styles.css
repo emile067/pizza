@@ -32,3 +32,12 @@ body{
   background-size: cover;
   position: relative;
 }
+#contact .form-control{
+  background: transparent;
+}
+#contact .form-row ::placeholder {
+  color:white;
+}
+#contact .form-group ::placeholder {
+  color:white;
+}
