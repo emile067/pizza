@@ -48,7 +48,7 @@
               <option>Stuffed Crust</option>
           </select>
       </div>
-        <div class="form-group row">
+        <div id="toppings" class="form-group row">
           <div class="col-md-6">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" name="Pepperoni" id="topping1" value="" >
@@ -118,12 +118,26 @@
           <label for="textareaadditionalinfo">Any additional specifications:</label>
           <textarea class="form-control" id="textareaadditionalinfo" rows="3"></textarea>
         </div>
+        <div class="form-group row">
+        <div id="deli-show" class="form-check col-md-2">
+          <input class="form-check-input" type="checkbox" name="deli" id="deliver-check" value="" >
+          <label class="form-check-label" for="topping10">
+            Deliver
+          </label>
+        </div>
+        <div id="deli-hide col-md-10">
+          <div class="form-group">
+            <input type="text" class="form-control mb-2 mr-sm-2" id="street" placeholder="Enter adress with street..">
+          </div>
+        </div>
+        </div>
         <button type="submit" class="btn btn-dark">Order</button>
         <button type="reset" class="btn btn-dark">Clear</button>
       </form>
       <ul id="orders">
 
       </ul>
+      <h3><span id="total"></span></h3>
     </div>
   </div>
   <div class="container-fluid padding bg3">

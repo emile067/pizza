@@ -13,6 +13,7 @@ function Order(number,size,crust,toppings,price){
   this.price=price;
 }
 $(document).ready(function(){
+  
   $('#order-form').submit(function(event){
     event.preventDefault();
     pizzaSize= $('#pizza-size').val();
@@ -20,7 +21,7 @@ $(document).ready(function(){
     pizzaCrust= $("#crust").val();
     var pizzaToppings= [];
     var toppingsList;
-    $(':checkbox:checked').each(function(i){
+    $('div#toppings:checkbox:checked').each(function(i){
       pizzaToppings[i] = $(this).val();
       toppingsArray[i] = $(this).attr('name')
     });
@@ -57,5 +58,5 @@ function priceCalc(){
   return totalPrice;
 }
 Order.prototype.theOrder = function (){
-  return this.number + " " + this.size + "pizzas, " +  this.crust + ",with " + this.toppings + " toppings.";
+  return this.number + " " + this.size + "pizzas, " +  this.crust + ",with " + this.toppings + " toppings.<br> Cost:"+this.price+"$";
 }
