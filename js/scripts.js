@@ -39,7 +39,16 @@ function priceCalc(){
   }else if(pizzaSize=='Large'){
     sizeChange=2;
   }
-
+  if (pizzaCrust=='Thin Crust'){
+    crustPrice=sizeChange*2.5;
+  }else if(pizzaCrust=='Thick Crust'){
+    crustPrice=sizeChange * 3;
+  }else if(pizzaCrust=='Pan Crust'){
+    crustPrice=sizeChange*2.5;
+  }else if(pizzaCrust=='Cheese Filled Crust'){
+    crustPrice=sizeChange*2.5;
+  }
+  toppingsPrice= toppingsNbr * sizeChange;
 }
 
 
