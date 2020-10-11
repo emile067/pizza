@@ -27,6 +27,7 @@ $(document).ready(function(){
     toppingsList = toppingsArray.join(',');
     toppingsNbr= toppingsArray.length;
     var orderPrice= priceCalc();
+    var newOrder= new Order(pizzaNbr,pizzaSize,pizzaCrust,toppingsList,orderPrice)
   });
 });
 function priceCalc(){
