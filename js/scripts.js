@@ -26,6 +26,7 @@ $(document).ready(function(){
     });
     toppingsList = toppingsArray.join(',');
     toppingsNbr= toppingsArray.length;
+    var orderPrice= priceCalc();
   });
 });
 function priceCalc(){
