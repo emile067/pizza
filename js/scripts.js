@@ -1,11 +1,26 @@
+var sumTotal = 0;
+var toppingsArray= [];
+var toppingsList;
+var toppingsNbr;
+var pizzaSize;
+var pizzaCrust;
+var pizzaNbr;
+
 $(document).ready(function(){
   $('#order-form').submit(function(event){
     event.preventDefault();
-    var pizzaNbr= $("#pizza-number").val();
-    var pizzaCrust= $("#crust").val();
-    var toppings= [];
+    pizzaSize= $('#pizza-size').val();
+    pizzaNbr= $("#pizza-number").val();
+    pizzaCrust= $("#crust").val();
+    var pizzaToppings= [];
+    var toppingsList;
     $(':checkbox:checked').each(function(i){
-      toppings[i] = $(this).val();
+      pizzaToppings[i] = $(this).val();
+      toppingsArray[i] = $(this).attr('name')
     });
+    toppingsList = toppingsArray.join(',');
+    toppingsNbr= toppingsArray.length;
   });
 });
+
+
