@@ -49,6 +49,8 @@ function priceCalc(){
     crustPrice=sizeChange*2.5;
   }
   toppingsPrice= toppingsNbr * sizeChange;
+  totalPrice= (crustPrice+toppingsPrice)*pizzaNbr;
+  return totalPrice;
 }
 
 
