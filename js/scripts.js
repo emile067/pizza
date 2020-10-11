@@ -28,5 +28,18 @@ $(document).ready(function(){
     toppingsNbr= toppingsArray.length;
   });
 });
+function priceCalc(){
+  var crustPrice,toppingsPrice;
+  var sizeChange;
+  var totalPrice;
+  if(pizzaSize=='Small'){
+    sizeChange=1;
+  }else if(pizzaSize=='Medium'){
+    sizeChange=1.5;
+  }else if(pizzaSize=='Large'){
+    sizeChange=2;
+  }
+
+}
 
 
