@@ -25,6 +25,7 @@ $(document).ready(function(){
     pizzaSize= $('#pizza-size').val();
     pizzaNbr= $("#pizza-number").val();
     pizzaCrust= $("#crust").val();
+    var address= $('#street').val();
     var pizzaToppings= [];
     var toppingsList;
     $('div#toppings:checkbox:checked').each(function(i){
@@ -35,8 +36,13 @@ $(document).ready(function(){
     toppingsNbr= toppingsArray.length;
     var orderPrice= priceCalc();
     sumTotal = sumTotal + orderPrice;
+    if($('#deliver-check').is(":checked")){
+      alert("order will be delivered at " + address);
+    }
     var newOrder= new Order(pizzaNbr,pizzaSize,pizzaCrust,toppingsList,orderPrice)
     $("ul#orders").append('<li><span>'+ newOrder.theOrder() +'</span></li>');
+    $("#total").text("total:" + sumTotal)
+    $("#deli-hide").hide();
   });
 });
 function priceCalc(){
