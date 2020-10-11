@@ -29,6 +29,7 @@ $(document).ready(function(){
     var orderPrice= priceCalc();
     sumTotal = sumTotal + orderPrice;
     var newOrder= new Order(pizzaNbr,pizzaSize,pizzaCrust,toppingsList,orderPrice)
+    $("ul#orders").append('<li><span>'+ newOrder.theOrder() +'</span></li>');
   });
 });
 function priceCalc(){
