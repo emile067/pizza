@@ -16,8 +16,10 @@ $(document).ready(function(){
   $("#deliver-check").click(function () {
     if ($(this).is(":checked")) {
         $("#deli-hide").show();
+        sumTotal= sumTotal+10;
     } else {
         $("#deli-hide").hide();
+        sumTotal=sumTotal-10;
     }
 });
   $('#order-form').submit(function(event){
