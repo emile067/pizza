@@ -13,7 +13,13 @@ function Order(number,size,crust,toppings,price){
   this.price=price;
 }
 $(document).ready(function(){
-  
+  $("#deliver-check").click(function () {
+    if ($(this).is(":checked")) {
+        $("#deli-hide").show();
+    } else {
+        $("#deli-hide").hide();
+    }
+});
   $('#order-form').submit(function(event){
     event.preventDefault();
     pizzaSize= $('#pizza-size').val();
