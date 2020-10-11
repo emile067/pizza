@@ -27,6 +27,7 @@ $(document).ready(function(){
     toppingsList = toppingsArray.join(',');
     toppingsNbr= toppingsArray.length;
     var orderPrice= priceCalc();
+    sumTotal = sumTotal + orderPrice;
     var newOrder= new Order(pizzaNbr,pizzaSize,pizzaCrust,toppingsList,orderPrice)
   });
 });
@@ -54,5 +55,6 @@ function priceCalc(){
   totalPrice= (crustPrice+toppingsPrice)*pizzaNbr;
   return totalPrice;
 }
-
-
+Order.prototype.theOrder = function (){
+  return this.number + " " + this.size + "pizzas, " +  this.crust + ",with " + this.toppings + " toppings.";
+}

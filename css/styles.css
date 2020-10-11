@@ -1,6 +1,7 @@
 body{
   color: azure;
   background-image: url('../images/wood-back2.jpeg');
+  width: auto;
 }
 .padding{
   padding: 50px;
@@ -20,7 +21,7 @@ body{
 .box{
   border: 15px solid;
   border-radius: 25px;
-  padding: 50px;
+  padding: 25px;
   margin: 20px;
 }
 .bg3{
