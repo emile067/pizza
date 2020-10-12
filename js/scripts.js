@@ -82,3 +82,6 @@ function priceCalc(){
 Order.prototype.theOrder = function (){
   return this.number + " " + this.size + "pizzas, " +  this.crust + ",with " + this.toppings + " toppings.<br> Cost:"+this.price+"$";
 }
+function reload(){
+  location.reload();
+}
